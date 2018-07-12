@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Order Coffee</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="n">
+ 
+    <ion-list no-lines no padding>
+    
+        <ion-item>
+          <ion-label>Coffee</ion-label>
+        </ion-item>
+        <p> R{{CoffeePrice}}</p>
+            <img src="./assets/imgs/coffee2.png" width="150" height="150"/>
+       
+        
+      </ion-list  >
+      <ion-item>
+      <ion-label >Toppings</ion-label>
+      <ion-input types="text" value=""></ion-input>
+    </ion-item>
+    
+      <ion-list no-lines no padding>
+         
+          <ion-item>
+              <ion-label>WhippedCream</ion-label>
+              <ion-checkbox [(ngModel)]="WhippedCream"></ion-checkbox>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>Cinnamon</ion-label>
+                <ion-checkbox [(ngModel)]="Cinnamon"></ion-checkbox>
+              </ion-item>
+           
+
+              <ion-item>
+                  <ion-label>Mint</ion-label>
+                  <ion-checkbox [(ngModel)]="Mint"></ion-checkbox>
+                </ion-item>
+               
+
+                <ion-item>
+                    <ion-label>Nutmeg</ion-label>
+                    <ion-checkbox [(ngModel)]="Nutmeg"></ion-checkbox>
+                  </ion-item>
+                 
+    </ion-list>
+    <ion-item>
+      <h1>Quantity:</h1><ion-col col-6> <button ion-button color="light" (click)="Quantity(+1)">+1</button> </ion-col>
+    <ion-col col-6> <button ion-button color="light" (click)="Quantity(-1)">-1</button> </ion-col><h2 text-center>{{counter}}</h2>
+    </ion-item>
+    <button ion-button round outline (click)="purchase()">buy</button>
+    <
+    
+    <p text-center>Your order will cost:</p>
+    <h2 text-center>R{{totalPrice}}</h2>
+    <p text-center>Thank you please call again</p>
+   
+</ion-content>
